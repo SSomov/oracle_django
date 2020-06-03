@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "assets/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/castom/main.css" %}" />
+    {% if request.path == "/search/specialist/" %}
+    {% endif %}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+        <div class="d-none d-sm-block">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'upload' %}">upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'search' %}">search</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <div class="home">
+            <div class="row">
+                <div class="col-12">
+                    <div class="zag mt-5">
+                        <h1>Database management interface</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="h-buttons mt-5">
+                {% block content %}{% endblock content %}
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static "assets/js/axios.min.js" %}"></script>
+</body>
+
+</html>

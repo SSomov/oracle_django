@@ -1,0 +1,4 @@
+X04;08.05.2020 15:28;BS_BI2;bs_gk;si_bw_gk_rto_outb;XI_J2EE_ADAPTER_REST;005056ac-4b93-1eda-a1d7-c929f7e08b40;ConnectTimeoutException: The host did not accept the connection within timeout of 10000 ms
+X04;08.05.2020 15:28;BS_BI2;bs_gk;si_bw_gk_rto_outb;XI_J2EE_ADAPTER_REST;005056ac-4b93-1eda-a1d7-c97683a76b40;ConnectTimeoutException: The host did not accept the connection within timeout of 10000 ms
+X04;08.05.2020 15:28;BS_BI2;bs_gk;si_bw_gk_rto_outb;XI_J2EE_ADAPTER_REST;005056ac-4b93-1eda-a1d7-d1820a01cb47;ConnectTimeoutException: The host did not accept the connection within timeout of 10000 ms
+X04;08.05.2020 15:28;BS_BI2;bs_gk;si_bw_gk_rto_outb;XI_J2EE_ADAPTER_REST;005056ac-ab7a-1eea-a1f0-eed677ec5abb;ConnectTimeoutException: The host did not accept the connection within timeout of 10000 ms

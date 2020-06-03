@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="home">
+<div class="row">
+  <div class="col-12 col-md-6 text-right">
+    <a href="{% url 'upload' %}"><button type="button" class="btn btn-outline-secondary home-btn1">Upload</button></a>
+  </div>
+  <div class="col-12 col-md-6 text-left">
+    <div class="col-12 col-md-6">
+      <a href="{% url 'search' %}"><button type="button" class="btn btn-outline-secondary home-btn1">Search</button></a>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
