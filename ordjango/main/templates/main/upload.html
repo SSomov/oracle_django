@@ -15,6 +15,7 @@
                         <input type="file" class="fcustom-file-input" id="InputFile" placeholder="Select a file">
                     </div>
                     <button id="btn-upload" type="submit" class="btn btn-primary">Ok</button>
+                    <div id="succ"></div>
                 </div>
             </div>
         </div>
@@ -24,13 +25,20 @@
 
 <script>
     document.getElementById('btn-upload').onclick = function () {
-        //var inputVal = document.getElementById("search-input").value;
         axios.defaults.xsrfCookieName = 'csrftoken'
         axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
-        axios.post('{% url 'ajax_upload' %}', {
-            firstName: 'Fred',
-            lastName: 'Flintstone'
+
+        var inputfile = document.getElementById("InputFile").files[0];
+        var frd = new FormData();
+        frd.append("file", inputfile);
+        axios.post('{% url 'ajax_upload' %}', frd, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
         }).then(function (response) {
+            if (response.data == "ok"){
+                document.getElementById("succ").innerHTML = "Файл загружен. БД обновлена.";
+            }
             console.log(response);
         }).catch(function (error) {
             console.log(error);

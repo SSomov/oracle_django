@@ -17,7 +17,7 @@
                     <button id="btn-search" type="submit" class="btn btn-primary mb-3">Search</button>
                 </div>
                 <div id="table-info" style="display: none;">
-                    <div id="info" class="mb-5 mr-4 ml-4">
+                    <div id="info" class="mb-5 mr-4 ml-4 text-left p-3">
 
                     </div>
                 </div>
@@ -34,6 +34,7 @@
             .then(function (response) {
                 document.getElementById('info').innerHTML = response.data;
                 document.getElementById("table-info").style.display = "";
+                console.log(response.data);
             });
     };
 </script>
