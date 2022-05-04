@@ -1,4 +1,5 @@
-v - виртуальное окружение python3 c django и т.д.<br>
+poetry install
+
 task<br>
     - fileupdate.csv - файл для update данных в таблице<br>
     - insert.csv - файл с тестовыми данными<br>
